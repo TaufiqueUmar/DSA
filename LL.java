@@ -78,7 +78,7 @@ class LL {
         secondLast.next = null;
     }
 
-    public Node reverse (Node head){
+    private Node reverse (Node head){
         Node curr = head;
         Node prev = null;
         while(curr !=null){
@@ -88,6 +88,9 @@ class LL {
             curr = temp;
         }
         return prev;
+    }
+    public void reverse(){
+        head = reverse(head);
     }
 
     public static void main(String[] args) {
@@ -102,13 +105,13 @@ class LL {
         list.addFirst("This");
         list.printList();
 
-        // list.deleteFirst();
-        // list.printList();
+        list.deleteFirst();
+        list.printList();
 
-        // list.deleteLast();
-        // list.printList();
+        list.deleteLast();
+        list.printList();
 
-        list.reverse("This");
+        list.reverse();
         list.printList();
     }
 }
